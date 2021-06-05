@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Briefcase-Version: 0.3.5
+Name: beewarecustomlibexample
+Formal-Name: Beeware Custom Lib Example
+App-ID: com.example.beewarecustomlibexample
+Version: 0.0.1
+Home-page: https://example.com/beewarecustomlibexample
+Author: Johnson Shek
+Author-email: zasoliton@gmail.com
+Summary: Beeware using custom library example
