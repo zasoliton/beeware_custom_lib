@@ -5,11 +5,10 @@ import toga
 from toga.style import Pack
 from toga.style.pack import COLUMN, ROW
 
-from beewarecustomlibexample.mylib.testlib import test # Import custom lib
+from beewarecustomlibexample.mylib.testlib import test  # Import custom lib
 
 
 class BeewareCustomLibExample(toga.App):
-
     def startup(self):
 
         main_box = toga.Box(style=Pack(direction=COLUMN))
@@ -21,7 +20,7 @@ class BeewareCustomLibExample(toga.App):
         name_box.add(self.name_input)
 
         button = toga.Button(
-        "Say Hello!", on_press=self.say_hello, style=Pack(padding=5)
+            "Say Hello!", on_press=self.say_hello, style=Pack(padding=5)
         )
 
         main_box.add(name_box)
@@ -34,8 +33,9 @@ class BeewareCustomLibExample(toga.App):
 
     def say_hello(self, widget):
         # Calling my test method
-        self.main_window.info_dialog("Test Dialog",
-                test(self.name_input.value))
+        result = test(self.name_input.value)
+        self.main_window.info_dialog("Test Dialog", result)
+
 
 def main():
     return BeewareCustomLibExample()
